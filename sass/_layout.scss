@@ -1,0 +1,113 @@
+.container {
+    max-width: 120rem; /*Ho imposto un'ampiezza massima di 1200px*/
+    margin: 8rem auto; /*Ho imposto un margine di 80px sopra e sotto, mentre automatico ai lati (il che permette di centrare il container)*/
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark); /*Ho impoststo un ombra attorno al contenitore principale*/
+    min-height: 50rem; /*Ho impostato un altezzan minima*/
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%; 
+
+    }
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-grey-light-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap; //Voglio che la barra di ricerca scenda di riga
+        height: 11rem; //Aumento l'altezza dell'header
+        align-content: space-around; //Così allineo il tutto lungo l'asse verticale
+    }
+}
+
+.content {
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+          
+
+    }
+
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%; /*Non voglio che venga applicato il grow, il shrink e che abbia uno spessore del 18%*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-view {
+    background-color: #fff;
+
+    //TEST
+    //background-color: blue;
+    //background-color: yellow; //NB: segue l'ordine in cui sono posti - prevale l'ultimo stile in elenco
+
+    // height: 80rem; quando inizio a formattare il blocco detail, lo annullo...di modo che la pagina si adatti automaticamente al contenuto
+
+    flex: 1; /*Impostato a 1 permette di occupare tutto lo spazio a disposizione*/ 
+}
+
+.detail {
+    font-size: 1.4rem; //prima stava solo in description, l'ho spostato qui per far si che valesse sia per il description che per user-reviews
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    //border-bottom: 1px solid var(--color-grey-light-2); //definisco una nuova variabile --line
+    border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+
+    }
+
+}
+
+.description {
+     
+    background-color: #fff;
+    // box-shadow: 0 2rem 5rem rgba(0,0,0,.06); definisco una nuova variabile shadow-light
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
+}
+
+.user-reviews {
+    //background-color: blue;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

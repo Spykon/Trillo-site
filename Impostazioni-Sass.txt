@@ -1,0 +1,12 @@
+IMPOSTAZIONI
+01) node -v
+02) npm init				(per creare il file package.json)
+03) npm install node-sass --save-dev	(per creare la cartella)
+04) npm install				(per scaricare la cartella se cancellata - solo se ho il file package.json)
+05) Aprire il file package.json e nella sezione "scripts" inserire:
+	"compile:sass": "node-sass sass/main.scss css/style.css"
+06) npm run compile:sass
+07) Aprire il file package.json ed alla fine del 5) aggiungere -w"
+08) npm run compile:sass			(lancio questo comando ogni volta che eseguo una modifica importante)
+09) npm install live-server		(questo permette di aprire la pagina in live-server)
+10) live-server				(apre una pagina che si aggiorna ad ogni modifica/salvataggio del progetto)

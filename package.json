@@ -1,0 +1,14 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "Landing Page for Tourism",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "elvis",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
